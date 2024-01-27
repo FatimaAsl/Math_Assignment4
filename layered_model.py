@@ -1,5 +1,5 @@
 from tensorflow.keras.datasets import mnist
-
+from tensorflow.keras.losses import BinaryCrossentropy
 from tensorflow import keras
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
