@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.losses import BinaryCrossentropy
 from tensorflow import keras
