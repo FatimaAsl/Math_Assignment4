@@ -3,7 +3,7 @@ name: pytest
 on:
   push:
     branches:
-      - main  # Replace with the branch you want to trigger pytest on (e.g., main, master)
+      - main
 
 jobs:
   pytest:
@@ -16,10 +16,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.11  # Replace with your desired Python version
+          python-version: 3.11
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # Replace with your dependencies file name (if applicable)
+        run: |
+          pip install -r requirements.txt
+          pip install pytest  # Install pytest here
 
       - name: Run pytest
-        run: pytest  # You can specify additional pytest options here
+        run: pytest
