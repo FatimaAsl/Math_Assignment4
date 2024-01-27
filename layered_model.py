@@ -23,7 +23,7 @@ def define_dense_model_with_hidden_layer(input_length,
     hidden_layer_size: the number of neurons in the hidden layer
     output_length: the number of outputs (number of neurons in the output layer)"""
 
-    model =keras.Sequential([Dense(hidden_layer_size,input_shape=input_length,activation=activation_func_array[0]),
+    model =keras.Sequential([Dense(hidden_layer_size,input_shape=(input_length,),activation=activation_func_array[0]),
                         Dense(output_length,activation= activation_func_array[1])
                        ])
     return model
